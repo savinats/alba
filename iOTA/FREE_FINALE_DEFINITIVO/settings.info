@@ -1,0 +1,456 @@
+General
+{
+    IOTA_revision SVNREV
+    simulation_dir C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\FREE_FINALE_DEFINITIVO\\/
+    simulation_dir_abs_path C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\FREE_FINALE_DEFINITIVO\\
+    simulation_end_string "2028-08-21 00:00:00.000"
+    simulation_end_JD 2462004.5
+    max_error 1e-08
+    use_fixed_attitude false
+    shadow_grid_size 200
+    disable_coefficient_db false
+    write_ascii_coefficient_db false
+}
+Environment
+{
+    use_third_body_forces true
+    use_aerodynamic_drag true
+    use_eddy_current_damping false
+    use_solar_radiation_pressure true
+    use_gravitational_torque true
+    use_earth_radiation_pressure false
+    ERP_num_bins 18
+    ERP_write_debug_output false
+    atmosphere_model NRLMSISE-00
+    atmospheric_absorption_coefficient 7.06699984e-06
+    consider_atmospheric_refraction false
+    use_fixed_solar_activity false
+    use_daily_solar_flux true
+    solar_activity_long-term_forecast_file C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\FREE_FINALE_DEFINITIVO\\INPUT\\fap_day.dat
+    use_wind false
+    hwm14_data_path C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\Windows\\IOTA_v0.7.0\\share\\data\\hwm14
+    egm_coef_file C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\Windows\\IOTA_v0.7.0\\share\\data\\gravity\\egm96.dat
+    egm_degree 8
+    egm_order 8
+    earth_magnetic_field_model WMM2020
+    wmm_file_name C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\Windows\\IOTA_v0.7.0\\share\\data\\magnetosphere\\WMM2020.cof
+}
+Spacecraft
+{
+    geometry_file C:\\Users\\Mattia\\Desktop\\alba\\iOTA_v0.7.0\\FREE_FINALE_DEFINITIVO\\INPUT\\2U_CubeSat.obj
+    spacecraft_geometry_scaling 1
+    mass 2.6600000000000001
+    COM_x 0
+    COM_y 0
+    COM_z 0
+    MOI_xx 0.014
+    MOI_yy 0.014
+    MOI_zz 0.0040000000000000001
+    MOI_xy 0
+    MOI_xz 0
+    MOI_yz 0
+    use_magnetic_tensor false
+    absorption_factor 0.5
+    diffuse_reflection_factor 0.5
+    radar_absorption_factor 1
+    eddy_current_decay_rate 0
+    eddy_current_calibration_factor 0
+    use_energy_dissipation false
+    energy_dissipation_constant 0
+    Reflectors
+    {
+        reflector_1
+        {
+            position_x 0
+            position_y 0.050000000000000003
+            position_z 0
+            normal_x 0
+            normal_y 0.050000000000000003
+            normal_z 0
+            opening_angle 30
+            surface_reflectivity 0.93000000000000005
+            reflector_area 0.001
+        }
+        reflector_2
+        {
+            position_x 0
+            position_y -0.050000000000000003
+            position_z 0
+            normal_x 0
+            normal_y -0.050000000000000003
+            normal_z 0
+            opening_angle 30
+            surface_reflectivity 0.78000000000000003
+            reflector_area 0.001
+        }
+        reflector_3
+        {
+            position_x 0
+            position_y 0
+            position_z -0.10000000000000001
+            normal_x 0
+            normal_y 0
+            normal_z -0.10000000000000001
+            opening_angle 30
+            surface_reflectivity 0.93000000000000005
+            reflector_area 0.002
+        }
+    }
+    use_tank false
+    use_tank_sloshing false
+    number_of_tanks 0
+    use_AOCS false
+    use_outgassing_impact false
+    number_of_AOCS_events 0
+}
+Initial_state
+{
+    initial_epoch_string "2028-08-07 00:00:00.000"
+    initial_epoch_JD 2461990.5
+    position_type kepler
+    semimajor_axis 6858.1369999999997
+    eccentricity 0.001
+    inclination_deg 97.400999999999996
+    inclination_rad 1.699968144734997
+    raan_deg 67.870000000000005
+    raan_rad 1.1845549633285515
+    argument_of_perigee_deg 0
+    argument_of_perigee_rad 0
+    true_anomaly_deg 0
+    true_anomaly_rad 0
+    state_x 2580940.7441305313
+    state_y 6346555.5172768738
+    state_z 0
+    state_vx 910.5963721415327
+    state_vy -370.31036314418498
+    state_vz 7567.7504712890659
+    roll_deg 0
+    pitch_deg 0
+    yaw_deg 0
+    roll_rate_deg 0
+    pitch_rate_deg 0
+    yaw_rate_deg 0
+    attitude_type orbit
+    attitude_state_q1 0.6109202885308358
+    attitude_state_q2 0.35605673854232894
+    attitude_state_q3 0.55996595661335302
+    attitude_state_q4 -0.43178481612267539
+    attitude_state_roll 0
+    attitude_state_pitch 0
+    attitude_state_yaw 0
+}
+Output
+{
+    history_output_stepsize 30
+    validation_output false
+    create_light_curve false
+    create_radar_measurement false
+    create_laser_ranging true
+    Observers
+    {
+        ARKL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 41.433300000000003
+            location_latitude 43.649999999999999
+            location_altitude 2077
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        BADL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 102.2354
+            location_latitude 51.770000000000003
+            location_altitude 803.29999999999995
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        BORL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 17.0746
+            location_latitude 52.277000000000001
+            location_altitude 123.40000000000001
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        GRSM
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 6.9215999999999998
+            location_latitude 43.754600000000003
+            location_altitude 1323.0999999999999
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        GRZL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 15.4933
+            location_latitude 47.067100000000003
+            location_altitude 539.39999999999998
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        HERL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 0.33610000000000001
+            location_latitude 50.867400000000004
+            location_altitude 75
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        IRKL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 104.3164
+            location_latitude 52.219099999999997
+            location_altitude 505.62
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        KTZL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 33.970100000000002
+            location_latitude 44.3932
+            location_altitude 68.700000000000003
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        MATM
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 16.699999999999999
+            location_latitude 40.640000000000001
+            location_altitude 536
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        MDVS
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 37.224902999999998
+            location_latitude 56.027735999999997
+            location_altitude 229.053
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        POT3
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 13.061400000000001
+            location_latitude 52.383000000000003
+            location_altitude 123.5
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        RIGL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 24.059075
+            location_latitude 56.948551000000002
+            location_altitude 31.337
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        SFEL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 173.7945
+            location_latitude 36.465000000000003
+            location_altitude 98.177000000000007
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        SIML
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 33.993099999999998
+            location_latitude 44.412799999999997
+            location_altitude 361.19999999999999
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        SVEL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 29.7805
+            location_latitude 60.533200000000001
+            location_altitude 69
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        WETL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 12.878
+            location_latitude 49.144399999999997
+            location_altitude 665
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        ZELL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 41.565399999999997
+            location_latitude 43.788699999999999
+            location_altitude 1155.4000000000001
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        ZIML
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 7.4652000000000003
+            location_latitude 46.877200000000002
+            location_altitude 951.20000000000005
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+        ALTL
+        {
+            type SLR
+            field_of_view 70
+            temporal_resolution 1
+            location_longitude 82.299999999999997
+            location_latitude 51.200000000000003
+            location_altitude 270
+            observation_campaign
+            {
+                start_string "2028-03-28 00:00:00.000"
+                end_string "2028-08-22 00:00:00.000"
+                start_JD 2461858.5
+                end_JD 2462005.5
+            }
+        }
+    }
+}
