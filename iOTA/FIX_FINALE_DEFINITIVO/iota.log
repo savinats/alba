@@ -1,0 +1,10 @@
+#_______________________________________________________________________________
+#
+#                        execution log file -iota.log-
+#                   run date+time: Fri Mar 01 17:36:56 2024
+
+info: Logging initialized.
+info: Generating coefficient database
+info: Starting propagation
+info: Simulation took 397.000000s.
+info: Finished successfully at Fri Mar 01 17:43:33 2024
